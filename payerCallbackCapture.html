@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Loading...</title>
+</head>
+
+<body>
+  <p style='padding: 12px;'>Redirecting...</p>
+
+  <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const status = urlParams.get('status');
+    const transactionId = urlParams.get('transactionId');
+
+    const postMsg = () => window.parent.postMessage({
+      status: status,
+      transactionId: transactionId,
+    }, "*")
+  </script>
+</body>
+
+</html>
