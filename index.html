@@ -17,6 +17,8 @@
       const status = urlParams.get('status')
       const transactionId = urlParams.get('transactionId')
 
+      console.log(`Status: ${status}, Transaction ID: ${transactionId}`)
+
       window.parent.postMessage({
         status: status,
         transactionId: transactionId,
