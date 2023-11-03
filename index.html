@@ -9,16 +9,21 @@
   <p style='padding: 12px;'>Redirecting...</p>
 
   <script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+    const captureAndPost = () => {
+      const queryString = window.location.search
 
-    const status = urlParams.get('status');
-    const transactionId = urlParams.get('transactionId');
+      const urlParams = new URLSearchParams(queryString)
 
-    const postMsg = () => window.parent.postMessage({
-      status: status,
-      transactionId: transactionId,
-    }, "*")
+      const status = urlParams.get('status')
+      const transactionId = urlParams.get('transactionId')
+
+      window.parent.postMessage({
+        status: status,
+        transactionId: transactionId,
+      }, "*")
+    }
+
+    window.onload = captureAndPost;
   </script>
 </body>
 
