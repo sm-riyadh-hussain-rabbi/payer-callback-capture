@@ -3,36 +3,36 @@
 
 <head>
   <title>Loading...</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+    }
+
+    .bkash-logo {
+      width: 40%;
+      animation: zoomInOut 2s ease-in-out infinite;
+    }
+
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
-<style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fff;
-  }
-
-  .bkash-logo {
-    width: 40%;
-    animation: zoomInOut 2s ease-in-out infinite;
-  }
-
-  @keyframes zoomInOut {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.2);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-</style>
 
 <body>
   <div class="container">
