@@ -51,7 +51,7 @@
             'flutterInAppWebViewPlatformReady',
             function (event) {
               window.flutter_inappwebview
-                .callHandler('transactionSuccess', event.data['transactionId'])
+                .callHandler('transactionSuccess', transactionId)
                 .then(function (result) {})
             }
           )
