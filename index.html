@@ -38,7 +38,7 @@
 
         console.log(`Status: ${status}, Transaction ID: ${transactionId}`)
 
-        if (event.data['status'] === 'done') {
+        if (status === 'done') {
           window.parent.postMessage(
             {
               status: status,
